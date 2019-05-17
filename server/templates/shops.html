@@ -1,0 +1,17 @@
+
+{% for shop in shops %}
+<div class="container">
+    <h1>{{ shop['shop_name'] }}</h1>
+    {% for listing in shop['listings'] %}
+    <div class="row">
+        <div class="col">
+            <img src="{{ listing['img_url'] }}">
+        </div>
+        <div class="col-8">
+            <p>{{ listing['title'] }}</p>
+        </div>
+        <div class="col">{{ listing['price'] }}</div>
+    </div>
+    {% endfor %}
+</div>
+{% endfor %}
